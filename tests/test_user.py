@@ -12,9 +12,21 @@ class User
 
             (obtained_data becomes True if get_all_data_success_OK)
 """
+
+import sys
+import os
 import unittest
 from unittest.mock import patch
 from user import User
+
+sys.path.append(
+    os.path.abspath(
+        os.path.join(
+            os.path.dirname(__file__),
+            '../src'
+        )
+    )
+)
 
 
 class TestUser(unittest.TestCase):

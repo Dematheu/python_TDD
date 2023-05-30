@@ -8,8 +8,19 @@ Second step (GREEN): Develop and see it work.
 Third step (Refactor): Improve it.
 """
 
+import sys
+import os
 import unittest
 from baconwitheggs import bacon_with_eggs
+
+sys.path.append(
+    os.path.abspath(
+        os.path.join(
+            os.path.dirname(__file__),
+            '../src'
+        )
+    )
+)
 
 
 class TestBaconWithEggs(unittest.TestCase):
@@ -68,4 +79,5 @@ class TestBaconWithEggs(unittest.TestCase):
                 )
 
 
-unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

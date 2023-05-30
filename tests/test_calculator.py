@@ -1,6 +1,17 @@
 # Todos os testes que fizer aqui dentro devem iniciar com a palavra Test
+import sys
+import os
 import unittest
 from calculator import soma
+
+sys.path.append(
+    os.path.abspath(
+        os.path.join(
+            os.path.dirname(__file__),
+            '../src'
+        )
+    )
+)
 
 
 class TestCalculadora(unittest.TestCase):
@@ -33,4 +44,5 @@ class TestCalculadora(unittest.TestCase):
             soma(0, '11')
 
 
-unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
