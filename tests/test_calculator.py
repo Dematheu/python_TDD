@@ -1,7 +1,8 @@
 # Todos os testes que fizer aqui dentro devem iniciar com a palavra Test
-import sys
 import os
+import sys
 import unittest
+
 from calculator import soma
 
 sys.path.append(
